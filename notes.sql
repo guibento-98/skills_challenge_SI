@@ -1,11 +1,3 @@
------------------------- RESP ---------------------
-
-SELECT CASE WHEN nt.grade>7 THEn st.Name ELSE NULL END AS name , nt.grade, st.value
-FROM Students as st, Notes as nt 
-WHERE st.value<=nt.Max_Value AND st.value>=nt.Min_Value
-ORDER BY value DESC, name ASC;
-
-----------------------------------------------------
 
 -- sqlite -- PREPARE
 DROP TABLE IF EXISTS Students;
@@ -35,3 +27,11 @@ INSERT INTO Students (Name, Value) VALUES
   ("Jaqueline", 63),
   ("Marcela", 88);
  
+------------------------ RESP ---------------------
+
+SELECT CASE WHEN nt.grade>7 THEn st.Name ELSE NULL END AS name , nt.grade, st.value
+FROM Students as st, Notes as nt 
+WHERE st.value<=nt.Max_Value AND st.value>=nt.Min_Value
+ORDER BY value DESC, name ASC;
+
+----------------------------------------------------
